@@ -1,0 +1,34 @@
+{
+	"name": "Peterson Remote Setup",
+	"dockerFile": "Dockerfile",
+	"runArgs": [ "-u", "vscode", "--cap-add=SYS_PTRACE", "--security-opt", "seccomp=unconfined" ],
+	"settings": {
+		"terminal.integrated.shell.linux": "/bin/bash",
+
+		"editor.tabSize": 2,
+		"editor.minimap.enabled": false,
+		"editor.rulers": [100],
+
+		"files.insertFinalNewline": true,
+		"files.trimTrailingWhitespace": true,
+		"files.trimFinalNewlines": true,
+		"files.associations": { "*.erb": "html" },
+
+		"solargraph.diagnostics": true,
+		"solargraph.autoformat": true,
+		"solargraph.formatting": true,
+
+		// Running the server:
+		// https://github.com/plantuml/plantuml-server#how-to-run-the-server-with-docker
+		"plantuml.server": "http://172.17.0.4:8080",
+		"plantuml.render": "PlantUMLServer"
+	},
+	"extensions": [
+		"castwide.solargraph",
+		"mrmlnc.vscode-duplicate",
+		"eamodio.gitlens",
+		"James-Yu.latex-workshop",
+		"streetsidesoftware.code-spell-checker",
+		"jebbs.plantuml"
+	]
+}
