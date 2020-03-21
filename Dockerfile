@@ -20,11 +20,11 @@ RUN apt-get update \
         build-essential \
         zlib1g-dev \
         libxml2 \
-        texlive-full \
+        texlive \
     #
     # Install gems
     && gem install \
-        bundler:1.17.3 \
+        bundler \
         rails \
         rubocop \
         solargraph \
