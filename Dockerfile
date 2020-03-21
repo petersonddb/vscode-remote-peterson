@@ -21,6 +21,7 @@ RUN apt-get update \
         zlib1g-dev \
         libxml2 \
         texlive \
+        latexmk \
     #
     # Install gems
     && gem install \
