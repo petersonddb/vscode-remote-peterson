@@ -5,6 +5,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 ARG USERNAME=vscode
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
+ARG GO_ARCHIVE=go1.14.1.linux-amd64.tar.gz
 
 # Configure apt, install packages and tools
 RUN apt-get update \
@@ -30,6 +31,10 @@ RUN apt-get update \
         rubocop \
         solargraph \
     #
+    # Install go
+    && curl -L https://dl.google.com/go/$GO_ARCHIVE -o $GO_ARCHIVE \
+    && tar -C /usr/local -xzf $GO_ARCHIVE \
+    #
     # Create a non-root user to use if preferred - see https://aka.ms/vscode-remote/containers/non-root-user.
     && groupadd --gid $USER_GID $USERNAME \
     && useradd -s /bin/zsh --uid $USER_UID --gid $USER_GID -m $USERNAME \
@@ -43,8 +48,11 @@ RUN apt-get update \
     && apt-get clean -y \
     && rm -rf /var/lib/apt/lists/*
 #
-# Change to the new user
+# Sign in new user
 USER $USER_UID
 #
 # Install Oh My Zsh
 RUN zsh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+#
+# Include go to the PATH
+ENV PATH=“/usr/local/go/bin:${PATH}”
