@@ -32,6 +32,7 @@
 		"jebbs.plantuml",
 		"saigowthamr.black-gold",
 		"MS-vsliveshare.vsliveshare-pack",
-		"lostintangent.vsls-whiteboard"
+		"lostintangent.vsls-whiteboard",
+		"ms-vscode.go"
 	]
 }
