@@ -55,4 +55,4 @@ USER $USER_UID
 RUN zsh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 #
 # Include go to the PATH
-ENV PATH=“/usr/local/go/bin:${PATH}”
+ENV PATH="/usr/local/go/bin:${PATH}"
