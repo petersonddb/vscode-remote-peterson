@@ -1,6 +1,7 @@
 FROM debian:latest
 
 ENV DEBIAN_FRONTEND=noninteractive
+ENV GOPATH=/workspaces/go
 
 ARG USERNAME=vscode
 ARG USER_UID=1000
