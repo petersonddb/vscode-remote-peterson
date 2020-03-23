@@ -12,11 +12,15 @@
 		"files.insertFinalNewline": true,
 		"files.trimTrailingWhitespace": true,
 		"files.trimFinalNewlines": true,
-		"files.associations": { "*.erb": "html" },
 
-		"solargraph.diagnostics": true,
-		"solargraph.autoformat": true,
-		"solargraph.formatting": true,
+		"ruby.useBundler": true,
+		"ruby.useLanguageServer": true,
+		"ruby.lint": {
+			"rubocop": {
+				"useBundler": true
+			}
+		},
+		"ruby.format": "rubocop",
 
 		// Running the server:
 		// https://github.com/plantuml/plantuml-server#how-to-run-the-server-with-docker
@@ -24,7 +28,8 @@
 		"plantuml.render": "PlantUMLServer"
 	},
 	"extensions": [
-		"castwide.solargraph",
+		"rebornix.ruby",
+		"vortizhe.simple-ruby-erb",
 		"mrmlnc.vscode-duplicate",
 		"eamodio.gitlens",
 		"James-Yu.latex-workshop",
