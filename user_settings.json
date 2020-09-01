@@ -1,0 +1,48 @@
+{
+    "editor.minimap.enabled": false,
+    "window.zoomLevel": 0,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "files.trimFinalNewlines": true,
+    "terminal.external.osxExec": "iTerm.app",
+    "workbench.colorTheme": "Blackgold",
+
+    "editor.tabSize": 2,
+    "editor.rulers": [100],
+
+    "ruby.useBundler": true,
+    "ruby.useLanguageServer": true,
+    "ruby.lint": {
+        "rubocop": {
+            "useBundler": true
+        }
+    },
+    "ruby.format": "rubocop",
+
+    "resmon.show.cpufreq": false,
+    "resmon.show.battery": false,
+
+    // Running the server:
+    // https://github.com/plantuml/plantuml-server#how-to-run-the-server-with-docker
+    "plantuml.server": "http://172.17.0.4:8080",
+    "plantuml.render": "PlantUMLServer",
+
+    "go.testFlags": ["-v"],
+
+    "remote.containers.defaultExtensions": [
+        "rebornix.ruby",
+        "vortizhe.simple-ruby-erb",
+		"mrmlnc.vscode-duplicate",
+		"eamodio.gitlens",
+		"James-Yu.latex-workshop",
+		"streetsidesoftware.code-spell-checker",
+		"jebbs.plantuml",
+		"saigowthamr.black-gold",
+		"MS-vsliveshare.vsliveshare-pack",
+		"lostintangent.vsls-whiteboard",
+        "ms-vscode.go",
+        "mutantdino.resourcemonitor",
+        "gruntfuggly.todo-tree"
+    ]
+}
